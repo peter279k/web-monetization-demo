@@ -11,7 +11,7 @@
 ## Prerequisites (Production)
 
 - One VPS server, or a Platform with supporting MySQL, PHP :).
-  - Our Production Demonstration is located on [Gandi Simple Hosting](https://docs.gandi.net/en/simple_hosting/index.html) :).
+  - Our Production Demonstration is located on [DigitalOcean](https://www.digitalocean.com/) :).
 - PHP 7.2+
 - MySQL 5.7+ or MySQL 8.0+ version support
 - Apache 2.4+ version support

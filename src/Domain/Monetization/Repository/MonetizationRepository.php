@@ -108,8 +108,8 @@ class MonetizationRepository
         }
 
         $monetizationData = new MonetizationData();
-        $fetchedResult['max_created_date_time'] = $createdDateTimeRange[0]['max_created_date_time'];
-        $fetchedResult['min_created_date_time'] = $createdDateTimeRange[0]['min_created_date_time'];
+        $fetchedResult['max_created_date_time'] = str_replace(' ', 'T', $createdDateTimeRange[0]['max_created_date_time']);
+        $fetchedResult['min_created_date_time'] = str_replace(' ', 'T', $createdDateTimeRange[0]['min_created_date_time']);
         $fetchedResult['history_amount_data'] = [];
 
         foreach ($results as $result) {

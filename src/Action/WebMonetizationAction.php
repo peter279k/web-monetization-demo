@@ -82,7 +82,7 @@ final class WebMonetizationAction
             $statusCode = 200;
         }
 
-        $response->getBody()->write(json_encode($transactionHistoryAmounts));
+        $response->getBody()->write(json_encode($transactionHistoryAmounts ?? $responseJson));
 
         return $response->withHeader('Content-Type', 'application/json')->withStatus($statusCode);
     }

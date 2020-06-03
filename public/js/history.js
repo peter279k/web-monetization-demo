@@ -4,7 +4,7 @@ $(function () {
     };
 
     $.post('/history', postData, function (response) {
-        if (!response) {
+        if (!response || response.length === 0) {
             console.log('It seems that fetching transaction history amounts is failed.');
             $('#transaction_history_amounts').text('Sorry. We cannot fetch latest transaction history amount result :(.');
 

@@ -1,0 +1,92 @@
+{% extends 'layouts/base.twig' %}
+
+{% block meta_description %}<meta name="description" content="{{ meta_description }}">{% endblock %}
+{% block meta_author %}<meta name="author" content="{{ meta_author }}">{% endblock %}
+{% block meta_web_monetization %}
+  {% if web_monetization_pointer == '' %}
+  {% endif %}
+  {% if  web_monetization_state == "enabled" %}
+    <meta name="monetization" content="{{ web_monetization_pointer }}">
+  {% endif %}
+{% endblock %}
+
+{% block body %}
+<main role="main" class="container-fluid">
+    <h1>Web Monetization Demo For Blog</h1>
+    <p class="lead">This is my simple blog.</p>
+      <!-- Page Content -->
+
+    <div class="row">
+
+      <!-- Post Content Column -->
+      <div class="col-lg-8">
+
+        <!-- Title -->
+        <h1 class="mt-4">Hello Web Monetization Demo!</h1>
+
+        <!-- Author -->
+        <p class="lead">
+          by
+          <a href="{{ author_link }}">{{ author_name }}</a>
+        </p>
+
+        <hr>
+
+        <!-- Date/Time -->
+        <p>Posted on {{ posted_date_time }}</p>
+
+        <hr>
+
+        <!-- Post Content -->
+        <p class="lead">{{ section_one }}</p>
+
+        <blockquote class="blockquote">
+          <p class="mb-0">The following section is the bonous block.</p>
+          <footer class="blockquote-footer">If you pay this via <a href="https://coil.com/" target="_blank">Coil</a>, it will unlock following section :)!
+            <b>
+              <cite title="Source Title">Unlocked Section Notification</cite>
+            </b>
+          </footer>
+        </blockquote>
+
+        <p id="locked_section_one" class="text-warning"></p>
+
+        <p id="locked_section_two" class="text-warning"></p>
+
+        <p id="pending_web_monetization" class="circle-inner"></p>
+
+        <h4 id="web_monetization_clicked" class="text-info"></h4>
+
+        <button id="calculate_web_monetization" type="button" class="btn btn-primary">Calculate Web Monetization!</button>
+        <button id="enable_web_monetization" type="button" class="btn btn-success">Enable Web Monetization!</button>
+        <button id="disable_web_monetization" type="button" class="btn btn-danger">Disable Web Monetization!</button>
+
+        <hr>
+      </div>
+    </div>
+</main>
+{% endblock %}
+
+{% block home %}
+  <a class="nav-link" href="/">Home</a>
+{% endblock %}
+
+{% block introduction %}
+  <a class="nav-link" href="/introduction">Introduction</a>
+{% endblock %}
+
+{% block blog %}
+  <a class="nav-link active" href="/blog">Blog</a>
+{% endblock %}
+
+{% block donate %}
+  <a class="nav-link" href="/donate">Donate</a>
+{% endblock %}
+
+{% block history %}
+  <a class="nav-link" href="/history">History</a>
+{% endblock %}
+
+{% block js_lib %}
+  <script src="/js/blog.js"></script>
+{% endblock %}

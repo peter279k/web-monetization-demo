@@ -1,0 +1,35 @@
+{% extends 'layouts/base.twig' %}
+
+{% block body %}
+<main role="main" class="container">
+    <div class="starter-template">
+        <h1>Web Monetization Transaction History</h1>
+        <h2 id="transaction_history_created_date_time" class="text-success"></h2>
+        <h2 id="transaction_history_amounts" class="text-info">From start_date</h2>
+    </div>
+</main>
+{% endblock %}
+
+{% block home %}
+    <a class="nav-link" href="/">Home</a>
+{% endblock %}
+
+{% block introduction %}
+    <a class="nav-link" href="/introduction">Introduction</a>
+{% endblock %}
+
+{% block blog %}
+    <a class="nav-link" href="/blog">Blog</a>
+{% endblock %}
+
+{% block donate %}
+    <a class="nav-link" href="/donate">Donate</a>
+{% endblock %}
+
+{% block history %}
+    <a class="nav-link active" href="/history">History</a>
+{% endblock %}
+
+{% block js_lib %}
+  <script src="/js/history.js"></script>
+{% endblock %}

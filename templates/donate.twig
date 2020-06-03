@@ -1,0 +1,65 @@
+{% extends 'layouts/base.twig' %}
+
+{% block meta_description %}<meta name="description" content="{{ meta_description }}">{% endblock %}
+{% block meta_author %}<meta name="author" content="{{ meta_author }}">{% endblock %}
+{% block meta_web_monetization %}
+  {% if web_monetization_pointer == '' %}
+  {% endif %}
+  {% if  web_monetization_state == "enabled" %}
+    <meta name="monetization" content="{{ web_monetization_pointer }}">
+  {% endif %}
+{% endblock %}
+
+{% block body %}
+<main role="main" class="container-fluid">
+    <h1>Web Monetization Demo For Donation</h1>
+    <!-- Page Content -->
+
+    <div class="row">
+
+      <!-- Post Content Column -->
+      <div class="col-lg-8">
+        <!-- Post Content -->
+        <p class="lead">This is a Donation Page</p>
+
+        <p class="text-secondary">Every developer should need a Donation Page and it can let some people support them easily!</p>
+
+        {% if web_monetization_pointer == '' %}
+            <p class="lead text-warning">The Web Monetization is not enabled!</p>
+            <button id="enable_web_monetization" type="button" class="btn btn-success">Enable Donation Page</button>
+        {% endif %}
+
+        {% if web_monetization_state == 'enabled' %}
+            <p id="web_monetization_donated" class="lead text-info"></p>
+            <button id="disable_web_monetization" type="button" class="btn btn-danger">Disable Donation Page</button>
+        {% endif %}
+
+        <hr>
+      </div>
+    </div>
+</main>
+{% endblock %}
+
+{% block home %}
+  <a class="nav-link" href="/">Home</a>
+{% endblock %}
+
+{% block introduction %}
+  <a class="nav-link" href="/introduction">Introduction</a>
+{% endblock %}
+
+{% block blog %}
+  <a class="nav-link" href="/blog">Blog</a>
+{% endblock %}
+
+{% block donate %}
+  <a class="nav-link active" href="/donate">Donate</a>
+{% endblock %}
+
+{% block history %}
+  <a class="nav-link" href="/history">History</a>
+{% endblock %}
+
+{% block js_lib %}
+  <script src="/js/donate.js"></script>
+{% endblock %}

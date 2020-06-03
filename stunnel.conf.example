@@ -1,0 +1,5 @@
+[http]
+cert = /data2/web-monetization-demo/fullchain.pem
+key = /data2/web-monetization-demo/privkey.pem
+accept = 3000
+connect = web-monetization.local:5000

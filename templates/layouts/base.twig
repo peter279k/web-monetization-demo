@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {% block meta_description %}<meta name="description" content="">{% endblock %}
+    {% block meta_author %}<meta name="author" content="">{% endblock %}
+    {% block meta_web_monetization %}{% endblock %}
+
+    <title>Starter Template for Web Monetization Demo</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Circle CSS -->
+    <link href="/css/circle.css" rel="stylesheet">
+
+    <!-- Bootstrap icon -->
+    <link href="/img/bootstrap.svg" rel="icon">
+
+    <!-- Custom styles for this template -->
+    <link href="/css/starter-template.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="/">Web-Monetization-Demo</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            {% block home %}{% endblock %}
+          </li>
+          <li class="nav-item">
+            {% block introduction %}{% endblock %}
+          </li>
+          <li class="nav-item">
+            {% block blog %}{% endblock %}
+          </li>
+          <li class="nav-item">
+            {% block donate %}{% endblock %}
+          </li>
+          <li class="nav-item">
+            {% block history %}{% endblock %}
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+      {% block body %}{% endblock %}
+
+    <!-- /.container -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4" crossorigin="anonymous"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    {% block js_lib %}{% endblock %}
+  </body>
+</html>

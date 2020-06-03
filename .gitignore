@@ -1,0 +1,7 @@
+*.pem
+stunnel.conf
+vendor/
+.idea/
+config/settings.php
+.env
+logs/

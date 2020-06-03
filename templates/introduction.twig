@@ -1,0 +1,34 @@
+{% extends 'layouts/base.twig' %}
+
+{% block body %}
+<main role="main" class="container-fluid">
+    <h1>Web Monetization Introduction</h1>
+    <p class="lead">You may want to know more details about Web Monetization.</p>
+    <p class="lead">Please checkout following lines:</p>
+    <div class="list-group">
+        <a href="https://webmonetization.org/docs/api" target="_blank" class="list-group-item list-group-item-action">Web Monetization Introduction</a>
+        <a href="https://dev.to/devteam/announcing-the-grant-for-the-web-hackathon-on-dev-3kd1?utm_source=Newsletter+Subscribers&utm_campaign=82fd886961-EMAIL_CAMPAIGN_2020_05_05_10_14&utm_medium=email&utm_term=0_d8f11d5d1e-82fd886961-154960421" target="_blank" class="list-group-item list-group-item-action">Web Monetization Activity on Dev.to</a>
+    </div>
+    <p class="lead">And this demonstration is developed by PHP, Slim Framework and Web Monetization :).</p>
+</main>
+{% endblock %}
+
+{% block home %}
+    <a class="nav-link inactive" href="/">Home</a>
+{% endblock %}
+
+{% block introduction %}
+    <a class="nav-link active" href="/introduction">Introduction</a>
+{% endblock %}
+
+{% block blog %}
+    <a class="nav-link" href="/blog">Blog</a>
+{% endblock %}
+
+{% block donate %}
+    <a class="nav-link" href="/blog">Donate</a>
+{% endblock %}
+
+{% block history %}
+  <a class="nav-link" href="/history">History</a>
+{% endblock %}

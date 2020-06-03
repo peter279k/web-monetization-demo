@@ -32,7 +32,7 @@ final class DonateAction
         if ($webMonetizationState === false || $webMonetizationState === 'disabled') {
             $webMonetizationPointer = '';
         } else {
-           $webMonetizationPointer = getenv('WEB_MONETIZATION_POINTER');
+            $webMonetizationPointer = getenv('WEB_MONETIZATION_POINTER');
         }
 
         $viewData = [
